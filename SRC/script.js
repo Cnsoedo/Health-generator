@@ -19,6 +19,10 @@ function generateHealth(event) {
   let prompt = `User instructions are: Generate tips about  ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let healthElement = document.querySelector("#health");
+  healthElement.classList.remove("hidden");
+  healthElement.innerHTML = ` <div class="generating">⌛️  Generating health tips about ${instructionsInput.value}</div>`;
+
   console.log("Generating health tips");
   console.log(`prompt: ${prompt}`);
   console.log(`context: ${context}`);

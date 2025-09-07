@@ -14,20 +14,23 @@
         <h1>AI Health Generator</h1>
       </header>
       <main>
-        <form id="health-generator-form">
-          <input
-            type="text"
-            placeholder="Enter a health topic"
-            autofocus
-            autocomplete="off"
-            required
-            class="instructions"
-            id="user-instructions"
-          />
+        <div class="form-container">
+          <form id="health-generator-form">
+            <input
+              type="text"
+              placeholder="Enter a health topic"
+              autofocus
+              autocomplete="off"
+              required
+              class="instructions"
+              id="user-instructions"
+            />
 
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="health" id="health"></div>
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: health,fitness or sleep</div>
+        </div>
+        <div class="health hidden" id="health"></div>
       </main>
 
       <footer>
