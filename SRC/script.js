@@ -1,5 +1,4 @@
 function displayHealth(response) {
-  console.log("health generated");
   new Typewriter("#health", {
     strings: response.data.answer,
     autoStart: true,
@@ -22,10 +21,6 @@ function generateHealth(event) {
   let healthElement = document.querySelector("#health");
   healthElement.classList.remove("hidden");
   healthElement.innerHTML = ` <div class="generating">⌛️  Generating health tips about ${instructionsInput.value}</div>`;
-
-  console.log("Generating health tips");
-  console.log(`prompt: ${prompt}`);
-  console.log(`context: ${context}`);
 
   axios.get(apiUrl).then(displayHealth);
 }
